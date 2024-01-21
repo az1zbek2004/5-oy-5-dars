@@ -1,0 +1,15 @@
+body{
+    background:linear-gradient(to right bottom, blue, red, yellow);
+    background-repeat: no-repeat;
+}
+.Phone-title{
+    color: white;
+    text-align: center;
+    margin: 20px;
+}
+td .fa-solid:hover{
+    transform: scale(1.2);
+}
+.error{
+    border: red;
+}

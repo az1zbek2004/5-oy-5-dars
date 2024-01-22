@@ -4,6 +4,7 @@ const button = document.getElementById("button");
 const phoneName = document.getElementById("phoneName");
 const phonePrice = document.getElementById("phonePrice");
 const phoneStorage = document.getElementById("phoneStorage");
+const phoneYonkus = document.getElementById("phoneYonkus");
 const phoneCategory = document.getElementById("phoneCategory");
 const form = document.getElementById("form");
 const tbody = document.getElementById("tbody");
@@ -17,11 +18,12 @@ function getArray() {
 button && button.addEventListener('click', function(event) {
     event.preventDefault();
 
-    if (validate(phoneName, phonePrice, phoneStorage, phoneCategory)) {
+    if (validate(phoneName, phonePrice, phoneStorage, phoneCategory, phoneYonkus)) {
 
         phoneName.setAttribute('class', "form-control");
         phonePrice.setAttribute('class', "form-control");
         phoneStorage.setAttribute('class', "form-control");
+        phoneYonkus.setAttribute('class', "form-control");
         phoneCategory.setAttribute('class', "form-control");
         
         let phone = {
@@ -29,6 +31,7 @@ button && button.addEventListener('click', function(event) {
             name:phoneName.value,
             price:phonePrice.value,
             storage:phoneStorage.value,
+            yonkus:phoneYonkus.value,
             category:phoneCategory.value
         };
 

@@ -1,6 +1,7 @@
 body{
-    background:linear-gradient(to right bottom, blue, red, yellow);
+    background:linear-gradient(to right bottom, blue, red, orange, red, blue);
     background-repeat: no-repeat;
+    background-size:(100% 130vh);
 }
 .Phone-title{
     color: white;

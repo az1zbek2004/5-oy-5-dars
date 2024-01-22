@@ -1,4 +1,4 @@
-function validate(name, price, storage, category) {
+function validate(name, price, storage, category, yonkus) { 
     const regEX2 = /^[a-zA-Z0-9 - ]{3,}$/;
 
     if (!regEX2.test(name.value)) {
@@ -17,6 +17,12 @@ function validate(name, price, storage, category) {
 
     if (!Number(storage.value)) {
         alert("Xotirasiga raqam yozilshi kerak");
+        storage.setAttribute('class', "form-control border-danger border-5");
+        storage.focus();
+        return false;
+    }
+    if (!Number(yonkus.value)) {
+        alert("Yonkusiga raqam yozilshi kerak");
         storage.setAttribute('class', "form-control border-danger border-5");
         storage.focus();
         return false;
@@ -40,6 +46,7 @@ function createNewRow(phone, index) {
     <td class="text-center">${phone.name}</td>
     <td class="text-center">${phone.price}$</td>
     <td class="text-center">${phone.storage}GB</td>
+    <td class="text-center">${phone.yonkus}%</td>
     <td class="text-center">${phone.category}</td>
     <td value="data_${phone.id}" class="text-center">
         <i id="edit"  style="cursor:pointer" class="fa-solid fa-pen-to-square"></i>
